@@ -61,18 +61,66 @@
             }
         }
 
+        /* Przestrzeń kosmiczna wokół Tytana */
         .moon-visual {
             flex: 1;
-            min-height: 300px;
-            overflow: hidden;
+            min-height: 350px;
+            background: radial-gradient(circle at center, #131a2e 0%, #070a12 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: relative;
+            overflow: hidden;
         }
 
-        /* Nowa sekcja graficzna: dynamiczne generowanie realistycznego Tytana */
-        .moon-visual img {
+        /* Niezawodny, szczegółowy Tytan wyrenderowany w CSS/SVG */
+        .titan-container {
+            position: relative;
+            width: 220px;
+            height: 220px;
+        }
+
+        .titan-body {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            border-radius: 50%;
+            /* Baza: gęsty, matowy pomarańcz smogu Tytana z cieniowaniem przestrzennym */
+            background: radial-gradient(circle at 35% 35%, #e0872b 0%, #944a05 60%, #3d1b00 95%);
+            position: relative;
+            box-shadow: 
+                inset -25px -25px 50px rgba(0, 0, 0, 0.9),
+                inset 15px 15px 30px rgba(255, 200, 100, 0.4);
+            overflow: hidden;
+        }
+
+        /* Warstwa chmur i rozmytych struktur metanowych na powierzchni */
+        .titan-body::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background-image: 
+                radial-gradient(circle at 40% 50%, rgba(61, 32, 2, 0.5) 0%, transparent 40%),
+                radial-gradient(circle at 70% 30%, rgba(245, 175, 80, 0.3) 0%, transparent 35%),
+                radial-gradient(circle at 20% 80%, rgba(40, 15, 0, 0.6) 0%, transparent 30%);
+            filter: blur(10px);
+        }
+
+        /* Charakterystyczna, niebieskawa, cienka zewnętrzna poświata górnych warstw atmosfery Tytana */
+        .titan-atmosphere-glow {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 50%;
+            /* Połączenie pomarańczowej głównej mgły z delikatnym niebieskim ringiem na krawędzi (zjawisko rozpraszania światła) */
+            box-shadow: 
+                0 0 30px rgba(224, 135, 43, 0.5),
+                0 0 15px rgba(14, 165, 233, 0.3);
+            pointer-events: none;
         }
 
         .moon-info {
@@ -151,12 +199,13 @@
     </header>
 
     <main>
-        <!-- Sekcja: TYTAN -->
         <section class="moon-card">
             <div class="moon-visual">
-                <img src="https://photojournal.jpl.nasa.gov/jpeg/PIA14602.jpg" alt="Prawdziwe zdjęcie Tytana z sondy Cassini, pokazujące gęstą, pomarańczową atmosferę kryjącą powierzchnię księżyca">
+                <div class="titan-container">
+                    <div class="titan-body"></div>
+                    <div class="titan-atmosphere-glow"></div>
+                </div>
             </div>
-
             
             <div class="moon-info">
                 <span class="planet-tag">Księżyc Saturna</span>
