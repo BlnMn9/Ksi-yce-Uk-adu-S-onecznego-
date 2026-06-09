@@ -1,1 +1,0 @@
-# Ksi-yce-Uk-adu-S-onecznego-
