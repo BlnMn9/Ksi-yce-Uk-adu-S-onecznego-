@@ -51,7 +51,7 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
             display: flex;
             flex-direction: column;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             border: 1px solid #1e293b;
         }
 
@@ -74,24 +74,23 @@
         }
 
         /* Stylowanie slajdów */
-        .slide {
-            display: none;
+        .slide-container {
             width: 100%;
             height: 100%;
             position: absolute;
             top: 0;
             left: 0;
+            display: none;
             background-color: #05070a;
         }
 
-        .slide.active {
+        .slide-container.active {
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        /* Zmiana na contain chroni zdjęcia przed ucinaniem krawędzi */
-        .slide img {
+        .slide-container img {
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -139,6 +138,11 @@
             font-size: 2.2rem;
             color: #fbbf24;
             margin-bottom: 10px;
+        }
+
+        /* Osobny kolor akcentu dla Enceladusa (błękit lodowy) */
+        .enceladus-card h2 {
+            color: #7dd3fc;
         }
 
         .planet-tag {
@@ -206,25 +210,24 @@
     </header>
 
     <main>
-        <section class="moon-card">
+        <section class="moon-card" id="titan-card">
             <div class="moon-visual">
-                <button class="slider-btn btn-prev" onclick="changeSlide(-1)">&#10094;</button>
-                <button class="slider-btn btn-next" onclick="changeSlide(1)">&#10095;</button>
+                <button class="slider-btn btn-prev" onclick="moveSlide('titan-card', -1)">&#10094;</button>
+                <button class="slider-btn btn-next" onclick="moveSlide('titan-card', 1)">&#10095;</button>
 
-                <div class="slide active">
+                <div class="slide-container active">
                     <img src="Saturns-moon-Titan-14.jpg" alt="Tytan - Zdjęcie 1">
                 </div>
-
-                <div class="slide">
+                <div class="slide-container">
                     <img src="PIA02145-1200w.jpg" alt="Tytan - Zdjęcie 2">
                 </div>
-                <div class="slide">
+                <div class="slide-container">
                     <img src="PIA07232.jpg" alt="Tytan - Zdjęcie 3">
                 </div>
-                <div class="slide">
+                <div class="slide-container">
                     <img src="PIA08119.jpg" alt="Tytan - Zdjęcie 4">
                 </div>
-                <div class="slide">
+                <div class="slide-container">
                     <img src="PIA21923_CassiniVIMSTitan_MAIN-1200w.jpg" alt="Tytan - Zdjęcie 5">
                 </div>
             </div>
@@ -232,7 +235,6 @@
             <div class="moon-info">
                 <span class="planet-tag">Księżyc Saturna</span>
                 <h2>Tytan</h2>
-
                 <p class="moon-description">
                     Tytan to największy księżyc Saturna i drugi pod względem wielkości księżyc w Układzie Słonecznym. Jest to niezwykle fascynujący świat – jako jedyny satelita posiada gęstą atmosferę, w której dominują azot i metan. Co więcej, jest to jedyne ciało niebieskie poza Ziemią, na którego powierzchni odkryto stałe zbiorniki cieczy (jeziora płynnego metanu i etanu). Udowodniono również, że pod lodową skorupą Tytana znajduje się globalny ocean płynnej wody.
                 </p>
@@ -257,6 +259,56 @@
                 </div>
             </div>
         </section>
+
+        <section class="moon-card enceladus-card" id="enceladus-card">
+            <div class="moon-visual">
+                <button class="slider-btn btn-prev" onclick="moveSlide('enceladus-card', -1)">&#10094;</button>
+                <button class="slider-btn btn-next" onclick="moveSlide('enceladus-card', 1)">&#10095;</button>
+
+                <div class="slide-container active">
+                    <img src="Enceladus (Moon) Facts.jpeg" alt="Enceladus - Zdjęcie 1">
+                </div>
+                <div class="slide-container">
+                    <img src="N00165314.jpg" alt="Enceladus - Zdjęcie 2">
+                </div>
+                <div class="slide-container">
+                    <img src="N00244792.jpg" alt="Enceladus - Zdjęcie 3">
+                </div>
+                <div class="slide-container">
+                    <img src="NASA's Cassini spacecraft zoo..." alt="Enceladus - Zdjęcie 4">
+                </div>
+                <div class="slide-container">
+                    <img src="PIA11133.jpg" alt="Enceladus - Zdjęcie 5">
+                </div>
+            </div>
+
+            <div class="moon-info">
+                <span class="planet-tag">Księżyc Saturna</span>
+                <h2>Enceladus</h2>
+                <p class="moon-description">
+                    Enceladus to szósty pod względem wielkości księżyc Saturna, pokryty niemal w całości czystym, lśniącym lodem, który odbija większość światła słonecznego. Pod tą lodową skorupą skrywa się globalny ocean płynnej wody. Najbardziej niezwykłą cechą Enceladusa są aktywne gejzery kriowulkaniczne w okolicach bieguna południowego, które nieustannie wyrzucają w przestrzeń kosmiczną pióropusze pary wodnej, lodu i prostych związków organicznych.
+                </p>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-value">504 km</span>
+                        <span class="stat-label">Średnica</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">-201°C</span>
+                        <span class="stat-label">Temp. powierzchni</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">0 atm</span>
+                        <span class="stat-label">Atmosfera</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">1,37 dnia</span>
+                        <span class="stat-label">Okres obiegu</span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -264,25 +316,31 @@
     </footer>
 
     <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
+        // Obiekt przechowujący indeksy aktualnych slajdów dla każdej karty osobno
+        const sliderStates = {
+            'titan-card': 0,
+            'enceladus-card': 0
+        };
 
-        function changeSlide(direction) {
-            // Ukryj obecne zdjęcie
-            slides[currentSlide].classList.remove('active');
+        function moveSlide(cardId, direction) {
+            const card = document.getElementById(cardId);
+            const slides = card.querySelectorAll('.slide-container');
             
-            // Oblicz indeks nowego zdjęcia
-            currentSlide += direction;
+            // Ukryj obecne zdjęcie w wybranej karcie
+            slides[sliderStates[cardId]].classList.remove('active');
             
-            // Zapętlenie slidera
-            if (currentSlide >= slides.length) {
-                currentSlide = 0;
-            } else if (currentSlide < 0) {
-                currentSlide = slides.length - 1;
+            // Zmień indeks dla konkretnej karty
+            sliderStates[cardId] += direction;
+            
+            // Zapętlenie slidera wewnątrz wybranej karty
+            if (sliderStates[cardId] >= slides.length) {
+                sliderStates[cardId] = 0;
+            } else if (sliderStates[cardId] < 0) {
+                sliderStates[cardId] = slides.length - 1;
             }
             
             // Pokaż nowe zdjęcie
-            slides[currentSlide].classList.add('active');
+            slides[sliderStates[cardId]].classList.add('active');
         }
     </script>
 
