@@ -144,7 +144,7 @@
         .enceladus-card h2 {
             color: #7dd3fc;
         }
-        
+
         .miranda-card h2 {
             color: #a78bfa;
         }
@@ -339,7 +339,7 @@
                 </div>
                 <div class="slide-container">
                     <img src="020520_miranda2.jpg" alt="Miranda - Zdjęcie 7">
-            </div>
+                </div> </div>
 
             <div class="moon-info">
                 <span class="planet-tag">Księżyc Urana</span>
@@ -375,7 +375,6 @@
     </footer>
 
     <script>
-        // Obiekt rejestrujący pozycję slajdu dla każdego slidera na podstawie jego ID
         const sliderStates = {
             'titan-card': 0,
             'enceladus-card': 0,
@@ -385,21 +384,17 @@
         function moveSlide(cardId, direction) {
             const card = document.getElementById(cardId);
             const slides = card.querySelectorAll('.slide-container');
-            
-            // Ukryj obecne zdjęcie
+
             slides[sliderStates[cardId]].classList.remove('active');
-            
-            // Przelicz nowy indeks slajdu
+
             sliderStates[cardId] += direction;
-            
-            // Zapętlenie w pętli nieskończonej
+
             if (sliderStates[cardId] >= slides.length) {
                 sliderStates[cardId] = 0;
             } else if (sliderStates[cardId] < 0) {
                 sliderStates[cardId] = slides.length - 1;
             }
-            
-            // Pokaż nowe zdjęcie
+
             slides[sliderStates[cardId]].classList.add('active');
         }
     </script>
