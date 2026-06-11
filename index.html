@@ -162,6 +162,10 @@
             color: #a78bfa;
         }
 
+        .io-card h2 {
+            color: #f59e0b;
+        }
+
         .planet-tag {
             display: inline-block;
             background-color: #1e293b;
@@ -391,6 +395,62 @@
                 </div>
             </div>
         </section>
+
+        <section class="moon-card io-card" id="io-card">
+            <div class="moon-visual-wrapper">
+                <div class="moon-visual">
+                    <div class="slide-container active">
+                        <img src="PIA01106~orig.jpg" alt="Io - Zdjęcie 1">
+                    </div>
+                    <div class="slide-container">
+                        <img src="PIA02599~orig.jpg" alt="Io - Zdjęcie 2">
+                    </div>
+                    <div class="slide-container">
+                        <img src="PIA01626~orig.jpg" alt="Io - Zdjęcie 3">
+                    </div>
+                    <div class="slide-container">
+                        <img src="PIA02550~orig.jpg" alt="Io - Zdjęcie 4">
+                    </div>
+                    <div class="slide-container">
+                        <img src="PIA01223~orig.jpg" alt="Io - Zdjęcie 5">
+                    </div>
+                    <div class="slide-container">
+                        <img src="PIA00738~orig.jpg" alt="Io - Zdjęcie 6">
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn btn-prev" onclick="moveSlide('io-card', -1)">&#10094; Poprzednie</button>
+                    <button class="slider-btn btn-next" onclick="moveSlide('io-card', 1)">Następne &#10095;</button>
+                </div>
+            </div>
+
+            <div class="moon-info">
+                <span class="planet-tag">Księżyc Jowisza</span>
+                <h2>Io</h2>
+                <p class="moon-description">
+                    Io to najbardziej wewnętrzny z czterech księżyców galileuszowych Jowisza. Jest to najbardziej aktywne geologicznie ciało w Układzie Słonecznym, posiadające ponad 400 czynnych wulkanów. Ciągłe erupcje uwalniają ogromne ilości siarki i dwutlenku siarki, które pokrywają powierzchnię jaskrawymi odcieniami żółci, czerwieni, czerni i zieleni. Niezwykła aktywność Io jest wynikiem potężnych sił przypływowych generowanych przez grawitację Jowisza oraz sąsiednich księżyców: Europy i Ganimedesa.
+                </p>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-value">3643 km</span>
+                        <span class="stat-label">Średnica</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">-143°C</span>
+                        <span class="stat-label">Temp. powierzchni</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">Śladowa</span>
+                        <span class="stat-label">Atmosfera</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">1,77 dnia</span>
+                        <span class="stat-label">Okres obiegu</span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -401,7 +461,8 @@
         const sliderStates = {
             'titan-card': 0,
             'enceladus-card': 0,
-            'miranda-card': 0
+            'miranda-card': 0,
+            'io-card': 0
         };
 
         function moveSlide(cardId, direction) {
