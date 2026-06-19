@@ -184,12 +184,20 @@
             font-size: 1.05rem;
         }
 
+        /* NOWY UKŁAD SIATKI: Domyślnie (na telefonie) 3 rzędy po 2 kafelki */
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 15px;
             border-top: 1px solid #1e293b;
             padding-top: 20px;
+        }
+
+        /* Na komputerach/tabletach (od szerokości 768px) 2 rzędy po 3 kafelki */
+        @media (min-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         .stat-box {
@@ -198,17 +206,21 @@
             border-radius: 8px;
             text-align: center;
             border: 1px solid #1e293b;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .stat-value {
             display: block;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             color: #f8fafc;
+            word-wrap: break-word;
         }
 
         .stat-label {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #64748b;
             text-transform: uppercase;
             margin-top: 4px;
@@ -273,12 +285,20 @@
                         <span class="stat-label">Temp. powierzchni</span>
                     </div>
                     <div class="stat-box">
-                        <span class="stat-value">1,5 atm</span>
-                        <span class="stat-label">Ciśnienie</span>
-                    </div>
-                    <div class="stat-box">
                         <span class="stat-value">15,9 dnia</span>
                         <span class="stat-label">Okres obiegu</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">1,345×10²³ kg</span>
+                        <span class="stat-label">Masa</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">1,35 m/s²</span>
+                        <span class="stat-label">Grawitacja</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">C. Huygens (1655)</span>
+                        <span class="stat-label">Odkrywca</span>
                     </div>
                 </div>
             </div>
@@ -326,12 +346,20 @@
                         <span class="stat-label">Temp. powierzchni</span>
                     </div>
                     <div class="stat-box">
-                        <span class="stat-value">0 atm</span>
-                        <span class="stat-label">Atmosfera</span>
-                    </div>
-                    <div class="stat-box">
                         <span class="stat-value">1,37 dnia</span>
                         <span class="stat-label">Okres obiegu</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">1,08×10²⁰ kg</span>
+                        <span class="stat-label">Masa</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">0,11 m/s²</span>
+                        <span class="stat-label">Grawitacja</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">W. Herschel (1789)</span>
+                        <span class="stat-label">Odkrywca</span>
                     </div>
                 </div>
             </div>
@@ -385,12 +413,20 @@
                         <span class="stat-label">Temp. powierzchni</span>
                     </div>
                     <div class="stat-box">
-                        <span class="stat-value">0 atm</span>
-                        <span class="stat-label">Atmosfera</span>
-                    </div>
-                    <div class="stat-box">
                         <span class="stat-value">1,41 dnia</span>
                         <span class="stat-label">Okres obiegu</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">6,4×10¹⁹ kg</span>
+                        <span class="stat-label">Masa</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">0,08 m/s²</span>
+                        <span class="stat-label">Grawitacja</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">G. Kuiper (1948)</span>
+                        <span class="stat-label">Odkrywca</span>
                     </div>
                 </div>
             </div>
@@ -441,12 +477,20 @@
                         <span class="stat-label">Temp. powierzchni</span>
                     </div>
                     <div class="stat-box">
-                        <span class="stat-value">Śladowa</span>
-                        <span class="stat-label">Atmosfera</span>
-                    </div>
-                    <div class="stat-box">
                         <span class="stat-value">1,77 dnia</span>
                         <span class="stat-label">Okres obiegu</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">8,93×10²² kg</span>
+                        <span class="stat-label">Masa</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">1,79 m/s²</span>
+                        <span class="stat-label">Grawitacja</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">G. Galileusz (1610)</span>
+                        <span class="stat-label">Odkrywca</span>
                     </div>
                 </div>
             </div>
