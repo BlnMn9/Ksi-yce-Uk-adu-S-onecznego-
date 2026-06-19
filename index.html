@@ -164,6 +164,10 @@
             color: #f59e0b;
         }
 
+        .ganymede-card h2 {
+            color: #10b981;
+        }
+
         .planet-tag {
             display: inline-block;
             background-color: #1e293b;
@@ -233,6 +237,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -493,6 +498,73 @@
                 </div>
             </div>
         </section>
+
+        <section class="moon-card ganymede-card" id="ganymede-card">
+            <div class="moon-visual-wrapper">
+                <div class="moon-visual">
+                    <div class="slide-container active">
+                        <img src="PIA00716.jpg" alt="Ganimedes - Zdjęcie 1">
+                    </div>
+                    <div class="slide-container">
+                        <img src="PIA00580.jpg" alt="Ganimedes - Zdjęcie 2">
+                    </div>
+                    <div class="slide-container">
+                        <img src="e1_-_pia24682_-_juno_ganymede_srv_-_darkside...jpg" alt="Ganimedes - Zdjęcie 3">
+                    </div>
+                    <div class="slide-container">
+                        <img src="pia24681-1041.jpg" alt="Ganimedes - Zdjęcie 4">
+                    </div>
+                    <div class="slide-container">
+                        <img src="PIA02278.jpg" alt="Ganimedes - Zdjęcie 5">
+                    </div>
+                    <div class="slide-container">
+                        <img src="PIA02282.jpg" alt="Ganimedes - Zdjęcie 6">
+                    </div>
+                    <div class="slide-container">
+                        <img src="PIA02233.jpg" alt="Ganimedes - Zdjęcie 7">
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn btn-prev" onclick="moveSlide('ganymede-card', -1)">&#10094; Poprzednie</button>
+                    <button class="slider-btn btn-next" onclick="moveSlide('ganymede-card', 1)">Następne &#10095;</button>
+                </div>
+            </div>
+
+            <div class="moon-info">
+                <span class="planet-tag">Księżyc Jowisza</span>
+                <h2>Ganimedes</h2>
+                <p class="moon-description">
+                    Ganimedes to największy księżyc w całym Układzie Słonecznym – jest większy od planety Merkury i planety karłowatej Pluton. Jako jedyny księżyc posiada własne, dipolowe pole magnetyczne, co świadczy o obecności płynnego żelaznego jądra. Jego powierzchnię pokrywają dwa rodzaje terenu: bardzo stare, ciemne i gęsto usiane kraterami obszary oraz nieco młodsze, jaśniejsze regiony poprzecinane głębokimi bruzdami i grzbietami tektonicznymi. Podobnie jak Europa, skrywa pod lodem potężny, podpowierzchniowy ocean.
+                </p>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-value">5268 km</span>
+                        <span class="stat-label">Średnica</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">-163°C</span>
+                        <span class="stat-label">Temp. powierzchni</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">7,15 dnia</span>
+                        <span class="stat-label">Okres obiegu</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">0,0248 M⊕</span>
+                        <span class="stat-label">Masa (Ziemi)</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">1,42 m/s²</span>
+                        <span class="stat-label">Grawitacja</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">G. Galileusz (1610)</span>
+                        <span class="stat-label">Odkrywca</span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -504,7 +576,8 @@
             'titan-card': 0,
             'enceladus-card': 0,
             'miranda-card': 0,
-            'io-card': 0
+            'io-card': 0,
+            'ganymede-card': 0
         };
 
         function moveSlide(cardId, direction) {
