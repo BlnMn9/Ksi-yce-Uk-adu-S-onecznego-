@@ -152,11 +152,12 @@
             margin-bottom: 10px;
         }
 
+        /* Indywidualne kolory nagłówków */
         .enceladus-card h2 { color: #7dd3fc; }
         .miranda-card h2 { color: #a78bfa; }
         .io-card h2 { color: #f59e0b; }
         .ganymede-card h2 { color: #10b981; }
-        .europa-card h2 { color: #22d3ee; }
+        .triton-card h2 { color: #2dd4bf; }
 
         .planet-tag {
             display: inline-block;
@@ -416,59 +417,6 @@
             </div>
         </section>
 
-
-        <section class="moon-card europa-card" id="europa-card">
-            <div class="moon-visual-wrapper">
-                <div class="moon-visual">
-                    <div class="slide-container active">
-                        <img src="europa-full.en.jpg" alt="Europa - Zdjęcie 1">
-                    </div>
-                    <div class="slide-container">
-                        <img src="4965690752_066be059b7_h.jpg" alt="Europa - Zdjęcie 2">
-                    </div>
-                    <div class="slide-container">
-                        <img src="Close-up Images of Jupiter's Frozen Ocean Moon_.jpeg" alt="Europa - Zdjęcie 3">
-                    </div>
-                    <div class="slide-container">
-                        <img src="Europa (2).jpeg" alt="Europa - Zdjęcie 4">
-                    </div>
-                    <div class="slide-container">
-                        <img src="Europa (1).jpeg" alt="Europa - Zdjęcie 5">
-                    </div>
-                    <div class="slide-container">
-                        <img src="Europa.jpeg" alt="Europa - Zdjęcie 6">
-                    </div>
-                    <div class="slide-container">
-                        <img src="Jupiter and its moon Europe.jpeg" alt="Europa - Zdjęcie 7">
-                    </div>
-                    <div class="slide-container">
-                        <img src="pia25695-nasas-juno-mission-captures-images-of-europa.jpg" alt="Europa - Zdjęcie 8">
-                    </div>
-                </div>
-                <div class="slider-controls">
-                    <button class="slider-btn btn-prev" onclick="moveSlide('europa-card', -1)">&#10094; Poprzednie</button>
-                    <button class="slider-btn btn-next" onclick="moveSlide('europa-card', 1)">Następne &#10095;</button>
-                </div>
-            </div>
-
-            <div class="moon-info">
-                <span class="planet-tag">Księżyc Jowisza</span>
-                <h2>Europa</h2>
-                <p class="moon-description">
-                    Europa to najmniejszy z czterech księżyców galileuszowych Jowisza i jedno z najbardziej obiecujących miejsc w Układzie Słonecznym w poszukiwaniu życia pozaziemskiego. Jej lodowa powierzchnia jest niezwykle gładka, poprzecinana siecią ciemnych linii i pęknięć, z bardzo małą liczbą kraterów uderzeniowych. Pod grubą warstwą lodu skrywa się globalny ocean płynnej wody o głębokości mogącej sięgać nawet 100 kilometrów, który pozostaje w stanie ciekłym dzięki ciepłu generowanemu przez siły przypływowe Jowisza.
-                </p>
-
-                <div class="stats-grid">
-                    <div class="stat-box"><span class="stat-value">3122 km</span><span class="stat-label">Średnica</span></div>
-                    <div class="stat-box"><span class="stat-value">-160°C</span><span class="stat-label">Temp. powierzchni</span></div>
-                    <div class="stat-box"><span class="stat-value">3,55 dnia</span><span class="stat-label">Okres obiegu</span></div>
-                    <div class="stat-box"><span class="stat-value">0,0080 M⊕</span><span class="stat-label">Masa (Ziemi)</span></div>
-                    <div class="stat-box"><span class="stat-value">1,31 m/s²</span><span class="stat-label">Grawitacja</span></div>
-                    <div class="stat-box"><span class="stat-value">G. Galileusz (1610)</span><span class="stat-label">Odkrywca</span></div>
-                </div>
-            </div>
-        </section>
-
         <section class="moon-card ganymede-card" id="ganymede-card">
             <div class="moon-visual-wrapper">
                 <div class="moon-visual">
@@ -520,6 +468,49 @@
                 </div>
             </div>
         </section>
+
+        <section class="moon-card triton-card" id="triton-card">
+            <div class="moon-visual-wrapper">
+                <div class="moon-visual">
+                    <div class="slide-container active">
+                        <img src="Triton (maan) - Wikipedia.jpeg" alt="Tryton - Zdjęcie 1">
+                    </div>
+                    <div class="slide-container">
+                        <img src="Triton.jpeg" alt="Tryton - Zdjęcie 2">
+                    </div>
+                    <div class="slide-container">
+                        <img src="50 Interesting Solar System Facts Scientists Have_.jpeg" alt="Tryton - Zdjęcie 3">
+                    </div>
+                    <div class="slide-container">
+                        <img src="PIA12184.jpg" alt="Tryton - Zdjęcie 4">
+                    </div>
+                    <div class="slide-container">
+                        <img src="PIA02208.jpg" alt="Tryton - Zdjęcie 5">
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn btn-prev" onclick="moveSlide('triton-card', -1)">&#10094; Poprzednie</button>
+                    <button class="slider-btn btn-next" onclick="moveSlide('triton-card', 1)">Następne &#10095;</button>
+                </div>
+            </div>
+
+            <div class="moon-info">
+                <span class="planet-tag">Księżyc Neptuna</span>
+                <h2>Tryton</h2>
+                <p class="moon-description">
+                    Tryton to największy naturalny satelita Neptuna i jedyny duży księżyc w Układzie Słonecznym, który porusza się ruchem wstecznym (w kierunku przeciwnym do obrotu planety). To silnie sugeruje, że nie powstał on na orbicie Neptuna, lecz został przechwycony z Pasa Kuipera. Jego lodowa powierzchnia przypomina teksturą skórkę kantalupy, a ekstremalnie niskie temperatury pozwalają na istnienie aktywnych gejzerów kriowulkanicznych, wyrzucających azot na wysokość wielu kilometrów.
+                </p>
+
+                <div class="stats-grid">
+                    <div class="stat-box"><span class="stat-value">2707 km</span><span class="stat-label">Średnica</span></div>
+                    <div class="stat-box"><span class="stat-value">-235°C</span><span class="stat-label">Temp. powierzchni</span></div>
+                    <div class="stat-box"><span class="stat-value">5,88 dnia (wsteczny)</span><span class="stat-label">Okres obiegu</span></div>
+                    <div class="stat-box"><span class="stat-value">0,0035 M⊕</span><span class="stat-label">Masa (Ziemi)</span></div>
+                    <div class="stat-box"><span class="stat-value">0,78 m/s²</span><span class="stat-label">Grawitacja</span></div>
+                    <div class="stat-box"><span class="stat-value">W. Lassell (1846)</span><span class="stat-label">Odkrywca</span></div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -527,13 +518,14 @@
     </footer>
 
     <script>
+        // Rejestr stanów slidera dla wszystkich 6 sekcji
         const sliderStates = {
             'titan-card': 0,
             'enceladus-card': 0,
             'miranda-card': 0,
             'io-card': 0,
             'ganymede-card': 0,
-            'europa-card': 0
+            'triton-card': 0
         };
 
         function moveSlide(cardId, direction) {
