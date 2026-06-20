@@ -152,21 +152,11 @@
             margin-bottom: 10px;
         }
 
-        .enceladus-card h2 {
-            color: #7dd3fc;
-        }
-
-        .miranda-card h2 {
-            color: #a78bfa;
-        }
-
-        .io-card h2 {
-            color: #f59e0b;
-        }
-
-        .ganymede-card h2 {
-            color: #10b981;
-        }
+        .enceladus-card h2 { color: #7dd3fc; }
+        .miranda-card h2 { color: #a78bfa; }
+        .io-card h2 { color: #f59e0b; }
+        .ganymede-card h2 { color: #10b981; }
+        .europa-card h2 { color: #22d3ee; }
 
         .planet-tag {
             display: inline-block;
@@ -186,7 +176,7 @@
             font-size: 1.05rem;
         }
 
-        /* Układ siatki: 3 rzędy po 2 kafelki na telefonie */
+        /* Układ siatki parametrów */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -195,7 +185,6 @@
             padding-top: 20px;
         }
 
-        /* Układ siatki: 2 rzędy po 3 kafelki na komputerze */
         @media (min-width: 768px) {
             .stats-grid {
                 grid-template-columns: repeat(3, 1fr);
@@ -237,7 +226,6 @@
         }
     </style>
 </head>
-
 <body>
 
     <header>
@@ -246,6 +234,7 @@
     </header>
 
     <main>
+
         <section class="moon-card" id="titan-card">
             <div class="moon-visual-wrapper">
                 <div class="moon-visual">
@@ -279,30 +268,12 @@
                 </p>
 
                 <div class="stats-grid">
-                    <div class="stat-box">
-                        <span class="stat-value">5150 km</span>
-                        <span class="stat-label">Średnica</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">-179°C</span>
-                        <span class="stat-label">Temp. powierzchni</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">15,9 dnia</span>
-                        <span class="stat-label">Okres obiegu</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">0,0225 M⊕</span>
-                        <span class="stat-label">Masa (Ziemi)</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">1,35 m/s²</span>
-                        <span class="stat-label">Grawitacja</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">C. Huygens (1655)</span>
-                        <span class="stat-label">Odkrywca</span>
-                    </div>
+                    <div class="stat-box"><span class="stat-value">5150 km</span><span class="stat-label">Średnica</span></div>
+                    <div class="stat-box"><span class="stat-value">-179°C</span><span class="stat-label">Temp. powierzchni</span></div>
+                    <div class="stat-box"><span class="stat-value">15,9 dnia</span><span class="stat-label">Okres obiegu</span></div>
+                    <div class="stat-box"><span class="stat-value">0,0225 M⊕</span><span class="stat-label">Masa (Ziemi)</span></div>
+                    <div class="stat-box"><span class="stat-value">1,35 m/s²</span><span class="stat-label">Grawitacja</span></div>
+                    <div class="stat-box"><span class="stat-value">C. Huygens (1655)</span><span class="stat-label">Odkrywca</span></div>
                 </div>
             </div>
         </section>
@@ -340,30 +311,12 @@
                 </p>
 
                 <div class="stats-grid">
-                    <div class="stat-box">
-                        <span class="stat-value">504 km</span>
-                        <span class="stat-label">Średnica</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">-201°C</span>
-                        <span class="stat-label">Temp. powierzchni</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">1,37 dnia</span>
-                        <span class="stat-label">Okres obiegu</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">0,000018 M⊕</span>
-                        <span class="stat-label">Masa (Ziemi)</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">0,11 m/s²</span>
-                        <span class="stat-label">Grawitacja</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">W. Herschel (1789)</span>
-                        <span class="stat-label">Odkrywca</span>
-                    </div>
+                    <div class="stat-box"><span class="stat-value">504 km</span><span class="stat-label">Średnica</span></div>
+                    <div class="stat-box"><span class="stat-value">-201°C</span><span class="stat-label">Temp. powierzchni</span></div>
+                    <div class="stat-box"><span class="stat-value">1,37 dnia</span><span class="stat-label">Okres obiegu</span></div>
+                    <div class="stat-box"><span class="stat-value">0,000018 M⊕</span><span class="stat-label">Masa (Ziemi)</span></div>
+                    <div class="stat-box"><span class="stat-value">0,11 m/s²</span><span class="stat-label">Grawitacja</span></div>
+                    <div class="stat-box"><span class="stat-value">W. Herschel (1789)</span><span class="stat-label">Odkrywca</span></div>
                 </div>
             </div>
         </section>
@@ -407,30 +360,12 @@
                 </p>
 
                 <div class="stats-grid">
-                    <div class="stat-box">
-                        <span class="stat-value">471 km</span>
-                        <span class="stat-label">Średnica</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">-213°C</span>
-                        <span class="stat-label">Temp. powierzchni</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">1,41 dnia</span>
-                        <span class="stat-label">Okres obiegu</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">0,000011 M⊕</span>
-                        <span class="stat-label">Masa (Ziemi)</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">0,08 m/s²</span>
-                        <span class="stat-label">Grawitacja</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">G. Kuiper (1948)</span>
-                        <span class="stat-label">Odkrywca</span>
-                    </div>
+                    <div class="stat-box"><span class="stat-value">471 km</span><span class="stat-label">Średnica</span></div>
+                    <div class="stat-box"><span class="stat-value">-213°C</span><span class="stat-label">Temp. powierzchni</span></div>
+                    <div class="stat-box"><span class="stat-value">1,41 dnia</span><span class="stat-label">Okres obiegu</span></div>
+                    <div class="stat-box"><span class="stat-value">0,000011 M⊕</span><span class="stat-label">Masa (Ziemi)</span></div>
+                    <div class="stat-box"><span class="stat-value">0,08 m/s²</span><span class="stat-label">Grawitacja</span></div>
+                    <div class="stat-box"><span class="stat-value">G. Kuiper (1948)</span><span class="stat-label">Odkrywca</span></div>
                 </div>
             </div>
         </section>
@@ -471,30 +406,65 @@
                 </p>
 
                 <div class="stats-grid">
-                    <div class="stat-box">
-                        <span class="stat-value">3643 km</span>
-                        <span class="stat-label">Średnica</span>
+                    <div class="stat-box"><span class="stat-value">3643 km</span><span class="stat-label">Średnica</span></div>
+                    <div class="stat-box"><span class="stat-value">-143°C</span><span class="stat-label">Temp. powierzchni</span></div>
+                    <div class="stat-box"><span class="stat-value">1,77 dnia</span><span class="stat-label">Okres obiegu</span></div>
+                    <div class="stat-box"><span class="stat-value">0,0150 M⊕</span><span class="stat-label">Masa (Ziemi)</span></div>
+                    <div class="stat-box"><span class="stat-value">1,79 m/s²</span><span class="stat-label">Grawitacja</span></div>
+                    <div class="stat-box"><span class="stat-value">G. Galileusz (1610)</span><span class="stat-label">Odkrywca</span></div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="moon-card europa-card" id="europa-card">
+            <div class="moon-visual-wrapper">
+                <div class="moon-visual">
+                    <div class="slide-container active">
+                        <img src="europa-full.en.jpg" alt="Europa - Zdjęcie 1">
                     </div>
-                    <div class="stat-box">
-                        <span class="stat-value">-143°C</span>
-                        <span class="stat-label">Temp. powierzchni</span>
+                    <div class="slide-container">
+                        <img src="4965690752_066be059b7_h.jpg" alt="Europa - Zdjęcie 2">
                     </div>
-                    <div class="stat-box">
-                        <span class="stat-value">1,77 dnia</span>
-                        <span class="stat-label">Okres obiegu</span>
+                    <div class="slide-container">
+                        <img src="Close-up Images of Jupiter's Frozen Ocean Moon_.jpeg" alt="Europa - Zdjęcie 3">
                     </div>
-                    <div class="stat-box">
-                        <span class="stat-value">0,0150 M⊕</span>
-                        <span class="stat-label">Masa (Ziemi)</span>
+                    <div class="slide-container">
+                        <img src="Europa (2).jpeg" alt="Europa - Zdjęcie 4">
                     </div>
-                    <div class="stat-box">
-                        <span class="stat-value">1,79 m/s²</span>
-                        <span class="stat-label">Grawitacja</span>
+                    <div class="slide-container">
+                        <img src="Europa (1).jpeg" alt="Europa - Zdjęcie 5">
                     </div>
-                    <div class="stat-box">
-                        <span class="stat-value">G. Galileusz (1610)</span>
-                        <span class="stat-label">Odkrywca</span>
+                    <div class="slide-container">
+                        <img src="Europa.jpeg" alt="Europa - Zdjęcie 6">
                     </div>
+                    <div class="slide-container">
+                        <img src="Jupiter and its moon Europe.jpeg" alt="Europa - Zdjęcie 7">
+                    </div>
+                    <div class="slide-container">
+                        <img src="pia25695-nasas-juno-mission-captures-images-of-europa.jpg" alt="Europa - Zdjęcie 8">
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn btn-prev" onclick="moveSlide('europa-card', -1)">&#10094; Poprzednie</button>
+                    <button class="slider-btn btn-next" onclick="moveSlide('europa-card', 1)">Następne &#10095;</button>
+                </div>
+            </div>
+
+            <div class="moon-info">
+                <span class="planet-tag">Księżyc Jowisza</span>
+                <h2>Europa</h2>
+                <p class="moon-description">
+                    Europa to najmniejszy z czterech księżyców galileuszowych Jowisza i jedno z najbardziej obiecujących miejsc w Układzie Słonecznym w poszukiwaniu życia pozaziemskiego. Jej lodowa powierzchnia jest niezwykle gładka, poprzecinana siecią ciemnych linii i pęknięć, z bardzo małą liczbą kraterów uderzeniowych. Pod grubą warstwą lodu skrywa się globalny ocean płynnej wody o głębokości mogącej sięgać nawet 100 kilometrów, który pozostaje w stanie ciekłym dzięki ciepłu generowanemu przez siły przypływowe Jowisza.
+                </p>
+
+                <div class="stats-grid">
+                    <div class="stat-box"><span class="stat-value">3122 km</span><span class="stat-label">Średnica</span></div>
+                    <div class="stat-box"><span class="stat-value">-160°C</span><span class="stat-label">Temp. powierzchni</span></div>
+                    <div class="stat-box"><span class="stat-value">3,55 dnia</span><span class="stat-label">Okres obiegu</span></div>
+                    <div class="stat-box"><span class="stat-value">0,0080 M⊕</span><span class="stat-label">Masa (Ziemi)</span></div>
+                    <div class="stat-box"><span class="stat-value">1,31 m/s²</span><span class="stat-label">Grawitacja</span></div>
+                    <div class="stat-box"><span class="stat-value">G. Galileusz (1610)</span><span class="stat-label">Odkrywca</span></div>
                 </div>
             </div>
         </section>
@@ -541,30 +511,12 @@
                 </p>
 
                 <div class="stats-grid">
-                    <div class="stat-box">
-                        <span class="stat-value">5268 km</span>
-                        <span class="stat-label">Średnica</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">-163°C</span>
-                        <span class="stat-label">Temp. powierzchni</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">7,15 dnia</span>
-                        <span class="stat-label">Okres obiegu</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">0,0248 M⊕</span>
-                        <span class="stat-label">Masa (Ziemi)</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">1,42 m/s²</span>
-                        <span class="stat-label">Grawitacja</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">G. Galileusz (1610)</span>
-                        <span class="stat-label">Odkrywca</span>
-                    </div>
+                    <div class="stat-box"><span class="stat-value">5268 km</span><span class="stat-label">Średnica</span></div>
+                    <div class="stat-box"><span class="stat-value">-163°C</span><span class="stat-label">Temp. powierzchni</span></div>
+                    <div class="stat-box"><span class="stat-value">7,15 dnia</span><span class="stat-label">Okres obiegu</span></div>
+                    <div class="stat-box"><span class="stat-value">0,0248 M⊕</span><span class="stat-label">Masa (Ziemi)</span></div>
+                    <div class="stat-box"><span class="stat-value">1,42 m/s²</span><span class="stat-label">Grawitacja</span></div>
+                    <div class="stat-box"><span class="stat-value">G. Galileusz (1610)</span><span class="stat-label">Odkrywca</span></div>
                 </div>
             </div>
         </section>
@@ -580,7 +532,8 @@
             'enceladus-card': 0,
             'miranda-card': 0,
             'io-card': 0,
-            'ganymede-card': 0
+            'ganymede-card': 0,
+            'europa-card': 0
         };
 
         function moveSlide(cardId, direction) {
