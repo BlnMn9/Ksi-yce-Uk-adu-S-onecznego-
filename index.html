@@ -149,6 +149,7 @@
 
         /* Akcenty kolorystyczne nagłówków */
         .enceladus-card h2 { color: #7dd3fc; }
+        .dione-card h2 { color: #e2e8f0; }
         .miranda-card h2 { color: #a78bfa; }
         .io-card h2 { color: #f59e0b; }
         .europa-card h2 { color: #22d3ee; }
@@ -295,6 +296,40 @@
             </div>
         </section>
 
+        <section class="moon-card dione-card" id="dione-card">
+            <div class="moon-visual-wrapper">
+                <div class="moon-visual">
+                    <div class="slide-container active"><img src="Dione1.jfif" alt="Dione - Zdjęcie 1"></div>
+                    <div class="slide-container"><img src="Dione2.jfif" alt="Dione - Zdjęcie 2"></div>
+                    <div class="slide-container"><img src="Dione3.jfif" alt="Dione - Zdjęcie 3"></div>
+                    <div class="slide-container"><img src="Dione4.jfif" alt="Dione - Zdjęcie 4"></div>
+                    <div class="slide-container"><img src="Dione5.jfif" alt="Dione - Zdjęcie 5"></div>
+                    <div class="slide-container"><img src="Dione6.jfif" alt="Dione - Zdjęcie 6"></div>
+                    <div class="slide-container"><img src="Dione7.webp" alt="Dione - Zdjęcie 7"></div>
+                    <div class="slide-container"><img src="Dione8.webp" alt="Dione - Zdjęcie 8"></div>
+                    <div class="slide-container"><img src="Dione9.webp" alt="Dione - Zdjęcie 9"></div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn btn-prev" onclick="moveSlide('dione-card', -1)">&#10094; Poprzednie</button>
+                    <button class="slider-btn btn-next" onclick="moveSlide('dione-card', 1)">Następne &#10095;</button>
+                </div>
+            </div>
+            <div class="moon-info">
+                <span class="planet-tag">Księżyc Saturna</span>
+                <h2>Dione</h2>
+                <p class="moon-description">
+                    Dione to czwarty pod względem wielkości księżyc Saturna. Składa się głównie z lodu wodnego z domieszką gęstszego, skalistego materiału w jądrze. Najbardziej charakterystyczną cechą powierzchni Dione jest sieć jasnych klifów lodowych i pęknięć na półkuli "tylnej" (zwróconej w stronę przeciwną do kierunku ruchu). Początkowo sądzono, że są to ślady erupcji kriowulkanicznych, ale obecnie wiemy, że to potężne, jasne uskokowe struktury tektoniczne. Księżyc ten jest ponadto gęsto usiany zróżnicowanymi kraterami uderzeniowymi.
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-box"><span class="stat-value">1122 km</span><span class="stat-label">Średnica</span></div>
+                    <div class="stat-box"><span class="stat-value">-186°C</span><span class="stat-label">Temp. powierzchni</span></div>
+                    <div class="stat-box"><span class="stat-value">2,74 dnia</span><span class="stat-label">Okres obiegu</span></div>
+                    <div class="stat-box"><span class="stat-value">0,00018 M⊕</span><span class="stat-label">Masa (Ziemi)</span></div>
+                    <div class="stat-box"><span class="stat-value">0,23 m/s²</span><span class="stat-label">Grawitacja</span></div>
+                    <div class="stat-box"><span class="stat-value">G. Cassini (1684)</span><span class="stat-label">Odkrywca</span></div>
+                </div>
+            </div>
+        </section>
         <section class="moon-card miranda-card" id="miranda-card">
             <div class="moon-visual-wrapper">
                 <div class="moon-visual">
@@ -329,7 +364,7 @@
         </section>
 
         <section class="moon-card io-card" id="io-card">
-            <div class="moon-visual-wrapper">
+             <div class="moon-visual-wrapper">
                 <div class="moon-visual">
                     <div class="slide-container active"><img src="PIA00738~orig.jpg" alt="Io - Zdjęcie 1"></div>
                     <div class="slide-container"><img src="PIA01223~orig.jpg" alt="Io - Zdjęcie 2"></div>
@@ -361,7 +396,7 @@
         </section>
 
         <section class="moon-card europa-card" id="europa-card">
-            <div class="moon-visual-wrapper">
+             <div class="moon-visual-wrapper">
                 <div class="moon-visual">
                     <div class="slide-container active"><img src="europa-full.en.jpg" alt="Europa - Zdjęcie 1"></div>
                     <div class="slide-container"><img src="4965690752_066be059b7_h.jpg" alt="Europa - Zdjęcie 2"></div>
@@ -460,7 +495,7 @@
         </section>
 
         <section class="moon-card charon-card" id="charon-card">
-            <div class="moon-visual-wrapper">
+             <div class="moon-visual-wrapper">
                 <div class="moon-visual">
                     <div class="slide-container active"><img src="Charon-Neutral-Bright-Release.jpg" alt="Charon - Zdjęcie 1"></div>
                     <div class="slide-container"><img src="Charon-released-10-9-2015-New-Horizons-2-e1444566526801.jpg" alt="Charon - Zdjęcie 2"></div>
@@ -504,12 +539,13 @@
         const sliderStates = {
             'titan-card': 0,
             'enceladus-card': 0,
+            'dione-card': 0, // Dodany suwak dla Dione
             'miranda-card': 0,
             'io-card': 0,
             'europa-card': 0,
             'ganymede-card': 0,
             'triton-card': 0,
-            'charon-card': 0 // Dodano stan suwaka dla Charona
+            'charon-card': 0 
         };
 
         function moveSlide(cardId, direction) {
