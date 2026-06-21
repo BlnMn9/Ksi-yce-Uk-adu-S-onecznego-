@@ -150,11 +150,12 @@
         /* Akcenty kolorystyczne nagłówków */
         .enceladus-card h2 { color: #7dd3fc; }
         .dione-card h2 { color: #e2e8f0; }
+        .iapetus-card h2 { color: #d6d3d1; } /* Szaro-srebrny dla Japeta */
         .miranda-card h2 { color: #a78bfa; }
         .io-card h2 { color: #f59e0b; }
         .europa-card h2 { color: #22d3ee; }
         .ganymede-card h2 { color: #10b981; }
-        .callisto-card h2 { color: #9ca3af; } /* Szarość dla Kallisto */
+        .callisto-card h2 { color: #9ca3af; }
         .triton-card h2 { color: #2dd4bf; }
         .charon-card h2 { color: #fb7185; }
 
@@ -332,6 +333,40 @@
             </div>
         </section>
 
+        <section class="moon-card iapetus-card" id="iapetus-card">
+            <div class="moon-visual-wrapper">
+                <div class="moon-visual">
+                    <div class="slide-container active"><img src="iapetus9.jpg" alt="Japet - Zdjęcie 1"></div>
+                    <div class="slide-container"><img src="iapetus8.webp" alt="Japet - Zdjęcie 2"></div>
+                    <div class="slide-container"><img src="iapetus7.webp" alt="Japet - Zdjęcie 3"></div>
+                    <div class="slide-container"><img src="iapetus6.jpg" alt="Japet - Zdjęcie 4"></div>
+                    <div class="slide-container"><img src="iapetus5.jfif" alt="Japet - Zdjęcie 5"></div>
+                    <div class="slide-container"><img src="iapetus1.jfif" alt="Japet - Zdjęcie 6"></div>
+                    <div class="slide-container"><img src="iapetus4.jfif" alt="Japet - Zdjęcie 7"></div>
+                    <div class="slide-container"><img src="iapetus3.jfif" alt="Japet - Zdjęcie 8"></div>
+                    <div class="slide-container"><img src="iapetus2.jfif" alt="Japet - Zdjęcie 9"></div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn btn-prev" onclick="moveSlide('iapetus-card', -1)">&#10094; Poprzednie</button>
+                    <button class="slider-btn btn-next" onclick="moveSlide('iapetus-card', 1)">Następne &#10095;</button>
+                </div>
+            </div>
+            <div class="moon-info">
+                <span class="planet-tag">Księżyc Saturna</span>
+                <h2>Japet</h2>
+                <p class="moon-description">
+                    Japet (Iapetus) to trzeci co do wielkości księżyc Saturna. Jest to jeden z najbardziej niezwykłych obiektów w Układzie Słonecznym ze względu na swój uderzający, dwukolorowy wygląd – jego półkula wiodąca jest ciemna niemal jak węgiel, podczas gdy półkula nadążna lśni jasnym lodem niczym śnieg. Kolejną unikalną cechą Japeta jest gigantyczny grzbiet górski biegnący dokładnie wzdłuż równika, który osiąga wysokość nawet 20 kilometrów i nadaje księżycowi charakterystyczny kształt przypominający orzech włoski.
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-box"><span class="stat-value">1469 km</span><span class="stat-label">Średnica</span></div>
+                    <div class="stat-box"><span class="stat-value">-160°C</span><span class="stat-label">Temp. powierzchni</span></div>
+                    <div class="stat-box"><span class="stat-value">79,33 dnia</span><span class="stat-label">Okres obiegu</span></div>
+                    <div class="stat-box"><span class="stat-value">0,0003 M⊕</span><span class="stat-label">Masa (Ziemi)</span></div>
+                    <div class="stat-box"><span class="stat-value">0,22 m/s²</span><span class="stat-label">Grawitacja</span></div>
+                    <div class="stat-box"><span class="stat-value">G. Cassini (1671)</span><span class="stat-label">Odkrywca</span></div>
+                </div>
+            </div>
+        </section>
         <section class="moon-card miranda-card" id="miranda-card">
             <div class="moon-visual-wrapper">
                 <div class="moon-visual">
@@ -498,6 +533,7 @@
                 </div>
             </div>
         </section>
+
         <section class="moon-card triton-card" id="triton-card">
             <div class="moon-visual-wrapper">
                 <div class="moon-visual">
@@ -573,14 +609,15 @@
         const sliderStates = {
             'titan-card': 0,
             'enceladus-card': 0,
-            'dione-card': 0, 
+            'dione-card': 0,
+            'iapetus-card': 0, // Dodany suwak dla Japeta
             'miranda-card': 0,
             'io-card': 0,
             'europa-card': 0,
             'ganymede-card': 0,
-            'callisto-card': 0, // Dodany suwak dla Kallisto
+            'callisto-card': 0, 
             'triton-card': 0,
-            'charon-card': 0 
+            'charon-card': 0
         };
 
         function moveSlide(cardId, direction) {
