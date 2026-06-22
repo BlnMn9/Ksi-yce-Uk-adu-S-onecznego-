@@ -151,6 +151,7 @@
         .enceladus-card h2 { color: #7dd3fc; }
         .dione-card h2 { color: #e2e8f0; }
         .iapetus-card h2 { color: #d6d3d1; }
+        .hyperion-card h2 { color: #fdba74; }
         .miranda-card h2 { color: #a78bfa; }
         .io-card h2 { color: #f59e0b; }
         .europa-card h2 { color: #22d3ee; }
@@ -364,6 +365,39 @@
                     <div class="stat-box"><span class="stat-value">0,0003 M⊕</span><span class="stat-label">Masa (Ziemi)</span></div>
                     <div class="stat-box"><span class="stat-value">0,22 m/s²</span><span class="stat-label">Grawitacja</span></div>
                     <div class="stat-box"><span class="stat-value">G. Cassini (1671)</span><span class="stat-label">Odkrywca</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="moon-card hyperion-card" id="hyperion-card">
+            <div class="moon-visual-wrapper">
+                <div class="moon-visual">
+                    <div class="slide-container active"><img src="PIA07740.jpg" alt="Hyperion - Zdjęcie 1"></div>
+                    <div class="slide-container"><img src="20160126_Hypermap01A.jpg" alt="Hyperion - Zdjęcie 2"></div>
+                    <div class="slide-container"><img src="20160126_Hypermap01.jpg" alt="Hyperion - Zdjęcie 3"></div>
+                    <div class="slide-container"><img src="imagescassini20150602pia17194-16.jpg" alt="Hyperion - Zdjęcie 4"></div>
+                    <div class="slide-container"><img src="imagescassini20150602pia17193-16.jpg" alt="Hyperion - Zdjęcie 5"></div>
+                    <div class="slide-container"><img src="N00040259.jpg" alt="Hyperion - Zdjęcie 6"></div>
+                    <div class="slide-container"><img src="OIP.qCyTeKq086YEOSG5AGbGvwHaHa.png" alt="Hyperion - Zdjęcie 7"></div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn btn-prev" onclick="moveSlide('hyperion-card', -1)">&#10094; Poprzednie</button>
+                    <button class="slider-btn btn-next" onclick="moveSlide('hyperion-card', 1)">Następne &#10095;</button>
+                </div>
+            </div>
+            <div class="moon-info">
+                <span class="planet-tag">Księżyc Saturna</span>
+                <h2>Hyperion</h2>
+                <p class="moon-description">
+                    Hyperion to największy spośród nieregularnych i niekulistych księżyców Saturna. Charakteryzuje się niezwykłą, wysoce porowatą strukturą przypominającą kosmiczną gąbkę, gdzie blisko 40% jego wnętrza stanowią puste przestrzenie. W przeciwieństwie do większości dużych księżyców, Hyperion wykazuje chaotyczną rotację – obiega Saturna, nieprzewidywalnie koziołkując w przestrzeni kosmicznej, na co wpływ ma silne rezonansowe oddziaływanie grawitacyjne z pobliskim, potężnym Tytanem.
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-box"><span class="stat-value">270 km</span><span class="stat-label">Średnica</span></div>
+                    <div class="stat-box"><span class="stat-value">-180°C</span><span class="stat-label">Temp. powierzchni</span></div>
+                    <div class="stat-box"><span class="stat-value">21,28 dnia</span><span class="stat-label">Okres obiegu</span></div>
+                    <div class="stat-box"><span class="stat-value">0,00000094 M⊕</span><span class="stat-label">Masa (Ziemi)</span></div>
+                    <div class="stat-box"><span class="stat-value">0,02 m/s²</span><span class="stat-label">Grawitacja</span></div>
+                    <div class="stat-box"><span class="stat-value">W. Bond, G. Bond, W. Lassell (1848)</span><span class="stat-label">Odkrywca</span></div>
                 </div>
             </div>
         </section>
@@ -614,6 +648,7 @@
             'enceladus-card': 0,
             'dione-card': 0,
             'iapetus-card': 0,
+            'hyperion-card': 0,
             'miranda-card': 0,
             'io-card': 0,
             'europa-card': 0,
