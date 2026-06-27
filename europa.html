@@ -173,32 +173,38 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const timerElement = document.getElementById("live-orbit-timer");
-            if (!timerElement) return;
+            const animatorElement = document.getElementById("orbit-animator");
+            
+            if (!timerElement || !animatorElement) return;
 
-            const targetDays = 3.551; // Pełny czas obiegu Europy (3 dni, 13 godzin, 13 minut)
-            const animationDurationMs = 12000; // Czas trwania pełnej pętli wizualnej w milisekundach (12 sekund)
+            const targetDays = 3.551; // Pełny czas obiegu
+            const animationDurationMs = 12000; // Cykl trwa 12 sekund
             const startTime = Date.now();
 
             function updateOrbitTimer() {
                 const elapsedMs = (Date.now() - startTime) % animationDurationMs;
                 const progressRatio = elapsedMs / animationDurationMs;
+                
+                // 1. Obliczanie czasu na liczniku
                 const currentTotalDays = progressRatio * targetDays;
-
-                // Obliczanie dni i godzin z ułamka doby
                 const days = Math.floor(currentTotalDays);
                 const remainingHoursTotal = (currentTotalDays - days) * 24;
                 const hours = Math.floor(remainingHoursTotal);
 
-                // Formatowanie tekstu licznika (bez minut)
                 timerElement.innerText = `${days}d ${hours}h`;
+
+                // 2. Synchronizacja obrotu animacji
+                // Kąt obrotu od 0 do 360 stopni na podstawie upływu czasu
+                const degrees = progressRatio * 360;
+                animatorElement.style.transform = `rotate(${degrees}deg)`;
 
                 requestAnimationFrame(updateOrbitTimer);
             }
 
-            // Uruchomienie pętli odliczania
             requestAnimationFrame(updateOrbitTimer);
         });
     </script>
+
 
 </body>
 </html>
