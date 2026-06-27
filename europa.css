@@ -1,0 +1,314 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b0f19;
+    color: #f0f4f8;
+    line-height: 1.6;
+}
+header {
+    background: linear-gradient(180deg, #02050a 0%, #0b0f19 100%);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #1e293b;
+}
+header h1 {
+    font-size: 2rem;
+    color: #38bdf8;
+    letter-spacing: 2px;
+}
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border: 1px solid #38bdf8;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.back-link:hover {
+    background-color: #38bdf8;
+    color: #0b0f19;
+}
+
+.moon-header {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+    .moon-header { flex-direction: row; }
+}
+.moon-hero-img {
+    flex: 1;
+    min-height: 400px;
+    background-image: url('europa-full.en.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+}
+.moon-hero-info {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.planet-tag {
+    display: inline-block;
+    background-color: #1e293b;
+    color: #94a3b8;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-self: flex-start;
+}
+.moon-hero-info h2 {
+    font-size: 3rem;
+    color: #22d3ee;
+    margin-bottom: 15px;
+}
+.moon-desc {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.quick-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+}
+.stat-box {
+    background-color: #141b2d;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #1e293b;
+}
+.stat-value {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f8fafc;
+}
+.stat-label {
+    font-size: 0.75rem;
+    color: #64748b;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.section {
+    background-color: #141b2d;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+.section h3 {
+    color: #38bdf8;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 10px;
+}
+
+/* Orbita CSS */
+.orbit-canvas-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    background: radial-gradient(circle at center, #0a0e17 0%, #05070a 100%);
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.orbit-system {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orbit-planet-core {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle at 30% 30%, #fcd34d, #d97706);
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(217, 119, 6, 0.4);
+    z-index: 2;
+}
+
+.orbit-path-animator {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: orbit-rotate 10s linear infinite;
+}
+
+.orbit-moon-point {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: #e2e8f0;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    z-index: 3;
+}
+
+@keyframes orbit-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.orbit-data-panel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #1e293b;
+}
+
+.data-metric { text-align: center; }
+.data-value { display: block; color: #38bdf8; font-size: 1.2rem; font-weight: bold; }
+.data-label { font-size: 0.75rem; color: #64748b; text-transform: uppercase; margin-top: 4px; }
+
+.orbit-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.orbit-controls button {
+    background-color: #1e293b;
+    color: #38bdf8;
+    border: 1px solid #38bdf8;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.orbit-controls button:hover {
+    background-color: #38bdf8;
+    color: #0b0f19;
+}
+
+/* Tabele */
+.extended-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.extended-table td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #1e293b;
+}
+.extended-table td:first-child { color: #94a3b8; width: 40%; }
+.extended-table td:last-child { color: #f8fafc; font-weight: bold; text-align: right; }
+
+/* Porównania */
+.comparison-item { margin-bottom: 20px; }
+.comparison-label { display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.95rem; }
+.progress-bg { background: #0b0f19; height: 14px; border-radius: 7px; overflow: hidden; border: 1px solid #1e293b; }
+.progress-fill { background: #38bdf8; height: 100%; border-radius: 7px; }
+
+/* Astrobiologia */
+.astro-rating { font-size: 1.3rem; margin-bottom: 15px; }
+.stars { color: #fbbf24; letter-spacing: 2px; }
+
+/* Tekst Grid */
+.text-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.text-box h4 {
+    color: #fbbf24;
+    margin-bottom: 10px;
+}
+.text-box p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+/* Galeria, misje, ciekawostki */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+.card {
+    background: #0b0f19;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+}
+.card h4 { color: #fbbf24; margin-bottom: 5px; }
+.agency { font-size: 0.8rem; color: #94a3b8; margin-bottom: 10px; display: block; }
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+.gallery-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.gallery-img:hover {
+    transform: scale(1.03);
+    border-color: #38bdf8;
+}
+
+/* Podobne obiekty */
+.related-card {
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.related-card:hover {
+    border-color: #38bdf8;
+    transform: translateY(-5px);
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #475569;
+    font-size: 0.9rem;
+    border-top: 1px solid #1e293b;
+    margin-top: 40px;
+}
