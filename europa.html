@@ -133,81 +133,94 @@
         }
 
         /* Orbita */
-        .orbit-visualizer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px 0;
-        }
-        .orbit-container {
-            width: 280px;
-            height: 280px;
-            border: 1px dashed #64748b;
-            border-radius: 50%;
-            position: relative;
-            animation: spin 5s linear infinite;
-            margin-bottom: 20px;
-        }
-        .orbit-planet {
-            width: 60px;
-            height: 60px;
-            background: #d97736;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 0.7rem;
-            color: white;
-            font-weight: bold;
-        }
-        .orbit-moon {
-            width: 16px;
-            height: 16px;
-            background: #e2e8f0;
-            border-radius: 50%;
-            position: absolute;
-            top: -8px;
-            left: 132px;
-            box-shadow: 0 0 10px #fff;
-        }
-        @keyframes spin { 100% { transform: rotate(360deg); } }
-        
-        .orbit-controls {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-        .orbit-controls button {
-            background: #1e293b;
-            color: white;
-            border: 1px solid #38bdf8;
-            padding: 8px 15px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .orbit-controls button:hover {
-            background: #38bdf8;
-            color: #0b0f19;
-        }
-        .orbit-info { color: #94a3b8; text-align: center; }
+<style>
+    .orbit-canvas-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+        background: radial-gradient(circle at center, #0a0e17 0%, #05070a 100%);
+        border: 1px solid #1e293b;
+        border-radius: 16px;
+        padding: 40px;
+        overflow: hidden;
+    }
+    
+    .orbit-system {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        border: 1px solid rgba(56, 189, 248, 0.2);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .orbit-planet-core {
+        width: 80px;
+        height: 80px;
+        /* Gradient imitujący planetę */
+        background: radial-gradient(circle at 30% 30%, #fcd34d, #d97706);
+        border-radius: 50%;
+        box-shadow: 0 0 40px rgba(217, 119, 6, 0.4);
+        z-index: 2;
+    }
+    
+    .orbit-path-animator {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        animation: orbit-rotate 10s linear infinite;
+    }
+    
+    .orbit-moon-point {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        background: #e2e8f0;
+        border-radius: 50%;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+        z-index: 3;
+    }
+    
+    @keyframes orbit-rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    
+    .orbit-data-panel {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #1e293b;
+    }
+    
+    .data-metric { text-align: center; }
+    .data-value { display: block; color: #38bdf8; font-size: 1.2rem; font-weight: bold; }
+    .data-label { font-size: 0.75rem; color: #64748b; text-transform: uppercase; margin-top: 4px; }
+</style>
 
-        /* Grid na tekst i tabele */
-        .text-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-        @media (min-width: 768px) {
-            .text-grid { grid-template-columns: 1fr 1fr; }
-        }
-        .text-box p { color: #cbd5e1; margin-bottom: 15px; }
-        .text-box h4 { color: #fbbf24; margin-bottom: 10px; }
+<div class="orbit-canvas-wrapper">
+    <div class="orbit-system">
+        <div class="orbit-planet-core"></div>
+        <div class="orbit-path-animator" id="orbit-animator">
+            <div class="orbit-moon-point"></div>
+        </div>
+    </div>
+    
+    <div class="orbit-data-panel">
+        <div class="data-metric"><span class="data-value">3.55 d</span><span class="data-label">Okres</span></div>
+        <div class="data-metric"><span class="data-value">670k km</span><span class="data-label">Dystans</span></div>
+        <div class="data-metric"><span class="data-value">13.7 km/s</span><span class="data-label">Prędkość</span></div>
+    </div>
+</div>
+
 
         /* Tabele */
         .extended-table {
