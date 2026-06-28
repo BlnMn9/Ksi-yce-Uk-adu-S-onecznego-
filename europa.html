@@ -230,27 +230,26 @@
                 requestAnimationFrame(updateOrbitTimer);
             }
 
-            // --- NOWA LOGIKA GALERII (LIGHTBOX) ---
+// --- LOGIKA GALERII (ZAKTUALIZOWANA) ---
             const modal = document.getElementById("gallery-modal");
             const modalImg = document.getElementById("modal-img");
             const closeBtn = document.querySelector(".close-modal");
             const prevBtn = document.querySelector(".prev-slide");
             const nextBtn = document.querySelector(".next-slide");
             
-            // Pobieramy wszystkie obrazki z galerii (ale nie z innych miejsc!)
             const galleryImages = document.querySelectorAll(".gallery-wrapper img");
             let currentIndex = 0;
 
-            // 1. Otwieranie modala po kliknięciu w obrazek
+            // 1. Otwieranie modala jako FLEX (żeby zadziałało centrowanie pionowe)
             galleryImages.forEach((img, index) => {
                 img.addEventListener("click", function() {
-                    modal.style.display = "block";
-                    modalImg.src = this.src; // Kopiujemy ścieżkę do klikniętego zdjęcia
-                    currentIndex = index;    // Zapisujemy, które to zdjęcie z kolei
+                    modal.style.display = "flex"; // Zmieniono z "block" na "flex"
+                    modalImg.src = this.src;
+                    currentIndex = index;
                 });
             });
 
-            // 2. Zamykanie modala (krzyżykiem lub klikając w puste czarne tło)
+            // 2. Zamykanie modala
             closeBtn.onclick = () => modal.style.display = "none";
             window.onclick = (event) => {
                 if (event.target === modal) {
@@ -262,7 +261,6 @@
             function changeSlide(step) {
                 currentIndex += step;
                 
-                // Jeśli wyjdziemy poza zakres, zapętlamy galerię
                 if (currentIndex >= galleryImages.length) {
                     currentIndex = 0;
                 } else if (currentIndex < 0) {
@@ -275,9 +273,10 @@
             prevBtn.onclick = () => changeSlide(-1);
             nextBtn.onclick = () => changeSlide(1);
 
-            // 4. Obsługa klawiatury (fajny dodatek)
+            // 4. Obsługa klawiatury
             document.addEventListener('keydown', function(e) {
-                if (modal.style.display === "block") {
+                // Sprawdzamy czy modal jest otwarty (ma przypisany flex)
+                if (modal.style.display === "flex") { 
                     if (e.key === "ArrowLeft") changeSlide(-1);
                     if (e.key === "ArrowRight") changeSlide(1);
                     if (e.key === "Escape") modal.style.display = "none";
