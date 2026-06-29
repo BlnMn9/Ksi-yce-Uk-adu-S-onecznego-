@@ -343,9 +343,9 @@ footer {
     height: 160px;
     border-radius: 50%;
     background: conic-gradient(
-        #38bdf8 0% 90%,   /* Niebieski - Woda 90% */
-        #fbbf24 90% 98%,  /* Złoty - Sole 8% */
-        #64748b 98% 100%  /* Szary - Śladowe 2% */
+        #94a3b8 0% 83%,   /* Szary - Skały (ok. 83%) */
+        #fbbf24 83% 93%,  /* Żółty/Rdza - Jądro (ok. 10%) */
+        #38bdf8 93% 100%  /* Niebieski - Woda (ok. 7%) */
     );
     display: flex;
     justify-content: center;
@@ -395,9 +395,9 @@ footer {
     flex-shrink: 0;
 }
 
+.color-rock { background: #94a3b8; }
+.color-core { background: #fbbf24; }
 .color-water { background: #38bdf8; }
-.color-salts { background: #fbbf24; }
-.color-trace { background: #64748b; }
 
 
 
