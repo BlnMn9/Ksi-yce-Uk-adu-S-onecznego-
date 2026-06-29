@@ -342,10 +342,11 @@ footer {
     width: 160px;
     height: 160px;
     border-radius: 50%;
+    /* 0-75% skały, 75-90% jądro, 90-100% woda */
     background: conic-gradient(
-        #94a3b8 0% 83%,   /* Szary - Skały (ok. 83%) */
-        #fbbf24 83% 93%,  /* Żółty/Rdza - Jądro (ok. 10%) */
-        #38bdf8 93% 100%  /* Niebieski - Woda (ok. 7%) */
+        #94a3b8 0% 75%,   
+        #fbbf24 75% 90%,  
+        #38bdf8 90% 100%  
     );
     display: flex;
     justify-content: center;
